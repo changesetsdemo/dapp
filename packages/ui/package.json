@@ -7,9 +7,10 @@
     "dist"
   ],
   "license": "MIT",
+  "private": false,
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/changesetsdemo/dapp.git",
+    "url": "git+https://github.com/changesetsdemo/dapp.git",
     "directory": "packages/ui"
   },
   "scripts": {
