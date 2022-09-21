@@ -1,5 +1,5 @@
 {
-  "name": "@changsesetsdemo/ui",
+  "name": "@changesetsdemo/ui",
   "version": "0.0.6",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -9,7 +9,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:JuneanDAO/changesetsdemo.git",
+    "url": "git+ssh://git@github.com/changesetsdemo/dapp.git",
     "directory": "packages/ui"
   },
   "scripts": {
@@ -25,5 +25,14 @@
     "tsconfig": "workspace:*",
     "tsup": "6.2.3",
     "typescript": "^4.5.2"
-  }
+  },
+  "description": "Test changesets version manage",
+  "bugs": {
+    "url": "https://github.com/changesetsdemo/dapp/issues"
+  },
+  "homepage": "https://github.com/changesetsdemo/dapp#readme",
+  "keywords": [
+    "changesets/cli"
+  ],
+  "author": "junean"
 }

@@ -1,7 +1,7 @@
 {
-  "name": "changesetsdemo",
+  "name": "dapp",
   "version": "0.0.0",
-  "private": false,
+  "private": true,
   "workspaces": [
     "apps/*",
     "packages/*"
