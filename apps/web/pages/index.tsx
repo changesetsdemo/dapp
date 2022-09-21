@@ -1,4 +1,4 @@
-import { Button } from "@changsesetsdemo/ui";
+import { Button } from '@changesetsdemo/ui';
 
 export default function Web() {
   return (

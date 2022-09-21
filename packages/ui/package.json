@@ -1,13 +1,13 @@
 {
   "name": "@changesetsdemo/ui",
   "version": "0.0.9",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "main": "src/index.tsx",
+  "typings": "src/index.tsx",
   "files": [
     "dist"
   ],
   "license": "MIT",
-  "private": false,
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/changesetsdemo/dapp.git",
