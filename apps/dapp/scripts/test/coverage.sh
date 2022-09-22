@@ -1,0 +1,1 @@
+jest --collectCoverage --reporters default jest-stare

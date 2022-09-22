@@ -1,0 +1,613 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "orderId",
+        "type": "uint256"
+      }
+    ],
+    "name": "CancelOrder",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "orderId",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "voucherId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "voucherValue",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "deservedAmount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "taker",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "receiverAddress",
+        "type": "string"
+      }
+    ],
+    "name": "Exchange",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "oldAdmin",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "newAdmin",
+        "type": "address"
+      }
+    ],
+    "name": "NewAdmin",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "oldPendingAdmin",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "newPendingAdmin",
+        "type": "address"
+      }
+    ],
+    "name": "NewPendingAdmin",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "orderId",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "voucherIn",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "voucherInSlot",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "tokenOutName",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "tokenOutChain",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "tokenOutAddress",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "exchangeRate",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint8",
+        "name": "exchangeRateDecimals",
+        "type": "uint8"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "publisher",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "recycler",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint8",
+        "name": "orderType",
+        "type": "uint8"
+      }
+    ],
+    "name": "PublishOrder",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "acceptAdmin",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "admin",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "orderId_",
+        "type": "uint256"
+      }
+    ],
+    "name": "cancelOrder",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "orderId_",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "voucherId_",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "receiverAddress_",
+        "type": "string"
+      }
+    ],
+    "name": "exchange",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "deservedAmount_",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "orderId_",
+        "type": "uint256"
+      }
+    ],
+    "name": "getExchangeOrder",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "voucherIn",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "voucherInSlot",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "tokenOutName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "tokenOutChain",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "tokenOutAddress",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "exchangeRate",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint8",
+            "name": "exchangeRateDecimals",
+            "type": "uint8"
+          },
+          {
+            "internalType": "address",
+            "name": "maker",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "recycler",
+            "type": "address"
+          },
+          {
+            "internalType": "enum IExchangeMarketV2.OrderType",
+            "name": "orderType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bool",
+            "name": "isValid",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct IExchangeMarketV2.ExchangeOrder",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "orderId_",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "fromIndex_",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "size_",
+        "type": "uint256"
+      }
+    ],
+    "name": "getExchangeRecords",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "voucherId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "voucherValue",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deservedAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "taker",
+            "type": "address"
+          },
+          {
+            "internalType": "uint64",
+            "name": "exchangeTime",
+            "type": "uint64"
+          },
+          {
+            "internalType": "string",
+            "name": "receiverAddress",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct IExchangeMarketV2.ExchangeRecord[]",
+        "name": "records",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "voucherIn_",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "voucherInSlot_",
+        "type": "uint256"
+      }
+    ],
+    "name": "getExchangeableOrderIds",
+    "outputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "exchangeableOrderIds",
+        "type": "uint256[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getSupportedChains",
+    "outputs": [
+      {
+        "internalType": "string[]",
+        "name": "",
+        "type": "string[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "initialize",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "chain_",
+        "type": "string"
+      }
+    ],
+    "name": "isChainSupported",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes",
+        "name": "",
+        "type": "bytes"
+      }
+    ],
+    "name": "onERC721Received",
+    "outputs": [
+      {
+        "internalType": "bytes4",
+        "name": "",
+        "type": "bytes4"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "pendingAdmin",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "voucherIn_",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "voucherInSlot_",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "tokenOutName_",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "tokenOutChain_",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "tokenOutAddress_",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "exchangeRate_",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint8",
+        "name": "exchangeRateDecimals_",
+        "type": "uint8"
+      },
+      {
+        "internalType": "address",
+        "name": "recycler_",
+        "type": "address"
+      },
+      {
+        "internalType": "enum IExchangeMarketV2.OrderType",
+        "name": "orderType_",
+        "type": "uint8"
+      }
+    ],
+    "name": "publishOrder",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "orderId_",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "newPendingAdmin_",
+        "type": "address"
+      }
+    ],
+    "name": "setPendingAdmin",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "chain_",
+        "type": "string"
+      },
+      {
+        "internalType": "bool",
+        "name": "enabled_",
+        "type": "bool"
+      }
+    ],
+    "name": "setSupportedChain",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "totalExchangeOrder",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "orderId_",
+        "type": "uint256"
+      }
+    ],
+    "name": "totalExchangeRecord",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "totalValidOrder",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

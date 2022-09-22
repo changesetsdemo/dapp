@@ -1,21 +1,37 @@
 {
-  "extends": "tsconfig/nextjs.json",
   "compilerOptions": {
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
+    "noFallthroughCasesInSwitch": true,
     "module": "esnext",
     "moduleResolution": "node",
+    "downlevelIteration": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "rootDir": ".",
+    "baseUrl": "src",
+    "paths": {
+      "@components/*": ["web/components/*"],
+      "@assets/*": ["web/assets/*"],
+      "@pages/*": ["web/pages/*"],
+      "@layouts/*": ["web/layouts/*"],
+      "@service/*": ["web/service/*"],
+      "@hooks/*": ["web/hooks/*"],
+      "@states/*": ["web/states/*"],
+      "@utils/*": ["web/utils/*"],
+      "@lib/*": ["web/lib/*"],
+      "@constants/*": ["web/constants/*"],
+      "@connection/*": ["web/connection/*"]
+    }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": ["src", "tests"],
+  "exclude": ["node_modules", "build", "scripts"]
 }

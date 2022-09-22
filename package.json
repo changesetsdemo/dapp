@@ -12,7 +12,7 @@
     "changeset:publish": "changeset publish",
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
-    "dapp-dev": "turbo run dapp-dev --parallel",
+    "client:server": "turbo run client:server --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },

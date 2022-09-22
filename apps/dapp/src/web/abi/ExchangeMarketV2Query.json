@@ -1,0 +1,217 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "market",
+        "type": "address"
+      }
+    ],
+    "name": "queryExchangeOrders",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "orderId",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "voucherIn",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "voucherInSlot",
+                "type": "uint256"
+              },
+              {
+                "internalType": "string",
+                "name": "tokenOutName",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "tokenOutChain",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "tokenOutAddress",
+                "type": "string"
+              },
+              {
+                "internalType": "uint256",
+                "name": "exchangeRate",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint8",
+                "name": "exchangeRateDecimals",
+                "type": "uint8"
+              },
+              {
+                "internalType": "address",
+                "name": "maker",
+                "type": "address"
+              },
+              {
+                "internalType": "address",
+                "name": "recycler",
+                "type": "address"
+              },
+              {
+                "internalType": "uint8",
+                "name": "orderType",
+                "type": "uint8"
+              },
+              {
+                "internalType": "bool",
+                "name": "isValid",
+                "type": "bool"
+              }
+            ],
+            "internalType": "struct IExchangeMarketV2.ExchangeOrder",
+            "name": "order",
+            "type": "tuple"
+          }
+        ],
+        "internalType": "struct IExchangeMarketV2Query.ExchangeOrder[]",
+        "name": "exchangeOrders",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "market",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "holder",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct IExchangeMarketV2Query.QueryExchangeableOrderParams",
+        "name": "params",
+        "type": "tuple"
+      }
+    ],
+    "name": "queryExchangeableOrders",
+    "outputs": [
+      {
+        "components": [
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "voucherIn",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "voucherInSlot",
+                "type": "uint256"
+              },
+              {
+                "internalType": "string",
+                "name": "tokenOutName",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "tokenOutChain",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "tokenOutAddress",
+                "type": "string"
+              },
+              {
+                "internalType": "uint256",
+                "name": "exchangeRate",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint8",
+                "name": "exchangeRateDecimals",
+                "type": "uint8"
+              },
+              {
+                "internalType": "address",
+                "name": "maker",
+                "type": "address"
+              },
+              {
+                "internalType": "address",
+                "name": "recycler",
+                "type": "address"
+              },
+              {
+                "internalType": "uint8",
+                "name": "orderType",
+                "type": "uint8"
+              },
+              {
+                "internalType": "bool",
+                "name": "isValid",
+                "type": "bool"
+              }
+            ],
+            "internalType": "struct IExchangeMarketV2.ExchangeOrder",
+            "name": "order",
+            "type": "tuple"
+          },
+          {
+            "internalType": "uint256",
+            "name": "orderId",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "value",
+                "type": "uint256"
+              },
+              {
+                "internalType": "string",
+                "name": "slotName",
+                "type": "string"
+              },
+              {
+                "internalType": "uint8",
+                "name": "valueDecimals",
+                "type": "uint8"
+              }
+            ],
+            "internalType": "struct IExchangeMarketV2Query.Voucher[]",
+            "name": "exchangeableVouchers",
+            "type": "tuple[]"
+          }
+        ],
+        "internalType": "struct IExchangeMarketV2Query.ExchangeableOrder[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

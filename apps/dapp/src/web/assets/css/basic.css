@@ -1,0 +1,213 @@
+@import url('./iconfont.css');
+html,
+body {
+  /* 苹方-简 中黑体 */
+  /* font-family: PingFangSC-Medium, sans-serif; */
+  font-family: 'sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  /* background: var(--d-bg1);
+  color: var(--d-font1); */
+  width: 100%;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 600;
+  font-size: 1.0625rem;
+  color: #333333;
+  background: var(--color-base-50);
+  overflow: hidden;
+}
+
+body {
+  min-height: 100vh;
+  /* scroll-behavior: smooth; */
+  text-rendering: optimizeSpeed;
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default padding */
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+/* A elements that don't have a class get default styles */
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+}
+
+pre {
+  font-family: 'sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+* {
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+
+input:-moz-placeholder {
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+
+input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+
+input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.scroll-wrapper-0 {
+  overflow-x: overlay;
+  overflow-y: overlay;
+}
+
+.scroll-wrapper-0::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;
+  /* 整个滚条背景 */
+}
+.scroll-wrapper-0::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: #39394d;
+  /* 滚条内嵌颜色 */
+}
+.scroll-wrapper-0::-webkit-scrollbar-button {
+  background-color: transparent;
+  width: 0;
+  height: 0;
+  /* 两边端按钮颜色 */
+}
+
+.scroll-wrapper-8 {
+  overflow-x: overlay !important;
+  overflow-y: overlay !important;
+}
+
+.scroll-wrapper-8::-webkit-scrollbar {
+  width: 8px !important;
+  height: 0 !important;
+  background: transparent !important;
+  /* 整个滚条背景 */
+}
+.scroll-wrapper-8::-webkit-scrollbar-thumb {
+  border-radius: 8px !important;
+  background: #39394d96 !important;
+  /* 滚条内嵌颜色 */
+}
+.scroll-wrapper-8::-webkit-scrollbar-button {
+  background-color: transparent !important;
+  width: 8px !important;
+  height: 0 !important;
+  /* 两边端按钮颜色 */
+}
+
+body,
+.scroll-wrapper {
+  overflow-x: overlay !important;
+  overflow-y: overlay !important;
+}
+
+.font-variant-numeric {
+  font-variant-numeric: tabular-nums lining-nums;
+}

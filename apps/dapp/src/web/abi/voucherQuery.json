@@ -1,0 +1,338 @@
+[
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "voucher",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            }
+          ],
+          "internalType": "struct IVoucherQuery.QueryVoucherParams",
+          "name": "params",
+          "type": "tuple"
+        }
+      ],
+      "name": "queryConvertibleVouchers",
+      "outputs": [
+        {
+          "components": [
+            {
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "issuer",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "fundCurrency",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "totalValue",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint128",
+                  "name": "lowestPrice",
+                  "type": "uint128"
+                },
+                {
+                  "internalType": "uint128",
+                  "name": "highestPrice",
+                  "type": "uint128"
+                },
+                {
+                  "internalType": "uint128",
+                  "name": "settlePrice",
+                  "type": "uint128"
+                },
+                {
+                  "internalType": "uint64",
+                  "name": "effectiveTime",
+                  "type": "uint64"
+                },
+                {
+                  "internalType": "uint64",
+                  "name": "maturity",
+                  "type": "uint64"
+                },
+                {
+                  "internalType": "uint8",
+                  "name": "collateralType",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "isIssuerRefunded",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "isIssuerWithdrawn",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "isVestingClaimed",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "isValid",
+                  "type": "bool"
+                }
+              ],
+              "internalType": "struct IConvertibleVoucher.SlotDetail",
+              "name": "slotDetail",
+              "type": "tuple"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "parValue",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct IConvertibleVoucher.ConvertibleVoucherSnapshot[]",
+          "name": "vouchers",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "voucher",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            }
+          ],
+          "internalType": "struct IVoucherQuery.QueryVoucherParams",
+          "name": "params",
+          "type": "tuple"
+        }
+      ],
+      "name": "queryDreamVouchers",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "units",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "slot",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "tokenURI",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct IVoucherQuery.VoucherSnapshot[]",
+          "name": "vouchers",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "voucher",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            }
+          ],
+          "internalType": "struct IVoucherQuery.QueryVoucherParams",
+          "name": "params",
+          "type": "tuple"
+        }
+      ],
+      "name": "queryFlexibleDateVestingVouchers",
+      "outputs": [
+        {
+          "components": [
+            {
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "issuer",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint8",
+                  "name": "claimType",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "uint64",
+                  "name": "startTime",
+                  "type": "uint64"
+                },
+                {
+                  "internalType": "uint64",
+                  "name": "latestStartTime",
+                  "type": "uint64"
+                },
+                {
+                  "internalType": "uint64[]",
+                  "name": "terms",
+                  "type": "uint64[]"
+                },
+                {
+                  "internalType": "uint32[]",
+                  "name": "percentages",
+                  "type": "uint32[]"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "isValid",
+                  "type": "bool"
+                }
+              ],
+              "internalType": "struct IFlexibleDateVestingVoucher.SlotDetail",
+              "name": "slotSnapshot",
+              "type": "tuple"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "vestingAmount",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct IFlexibleDateVestingVoucher.FlexibleDateVestingVoucherSnapshot[]",
+          "name": "vouchers",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "voucher",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            }
+          ],
+          "internalType": "struct IVoucherQuery.QueryVoucherParams",
+          "name": "params",
+          "type": "tuple"
+        }
+      ],
+      "name": "queryVestingVouchers",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint8",
+              "name": "claimType",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint64",
+              "name": "term",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint256",
+              "name": "vestingAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "principal",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint64[]",
+              "name": "maturities",
+              "type": "uint64[]"
+            },
+            {
+              "internalType": "uint32[]",
+              "name": "percentages",
+              "type": "uint32[]"
+            },
+            {
+              "internalType": "uint256",
+              "name": "claimableAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "originalInvestor",
+              "type": "string"
+            },
+            {
+              "internalType": "bool",
+              "name": "isValid",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct IVestingVoucher.VestingVoucherSnapshot[]",
+          "name": "vouchers",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ]

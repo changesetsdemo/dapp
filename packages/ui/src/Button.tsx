@@ -1,3 +1,8 @@
-export const Button = () => {
-  return <button>Boop Test Button Dev 0.0.10</button>;
+import React from 'react';
+
+export const Button = (props: {
+  className: string;
+  children?: React.ReactNode;
+}) => {
+  return <button className={props.className}>{props.children}</button>;
 };
