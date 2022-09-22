@@ -1,6 +1,6 @@
 {
   "name": "dapp",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Key Tube",
   "private": true,
   "main": "index.js",
@@ -109,7 +109,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.18.0",
-    "@changesetsdemo/ui": "workspace:0.0.10",
+    "@changesetsdemo/ui": "workspace:0.0.12",
     "@coinbase/wallet-sdk": "^3.3.0",
     "@date-io/dayjs": "^2.14.0",
     "@emotion/react": "^11.9.0",

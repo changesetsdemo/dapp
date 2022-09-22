@@ -4,5 +4,9 @@ export const Button = (props: {
   className: string;
   children?: React.ReactNode;
 }) => {
-  return <button className={props.className}>{props.children}</button>;
+  return (
+    <div>
+      <button className={props.className}>{props.children}</button>
+    </div>
+  );
 };
